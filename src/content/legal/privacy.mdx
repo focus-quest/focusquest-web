@@ -1,0 +1,258 @@
+---
+title: "Privacy Policy"
+description: "How Focus Quest handles your data."
+effectiveDate: 2026-04-27
+lastUpdated: 2026-04-27
+---
+
+# Privacy Policy
+
+**Effective: 27 April 2026**
+
+This Privacy Policy explains how Focus Quest ("the App") collects, uses, and shares information when you use the App on your iOS device. Focus Quest is operated by **Kaumon Aung** ("we", "us", "our"), an individual developer based in Berlin, Germany. The App is available worldwide on the iOS App Store, with most users located in the United States.
+
+For the purposes of the EU General Data Protection Regulation (GDPR), we are the **data controller** for personal data processed through the App. If you have any questions, you can reach us at **kaumon.business@gmail.com**.
+
+---
+
+## At a glance
+
+- We collect the minimum data needed to run the App: an account identifier and email from Apple Sign In, plus your in-game progress and social activity.
+- We **do not** sell your data, share it for advertising, or use any analytics, tracking, crash-reporting, or AI services.
+- We use four service providers to operate the App: **Apple** (sign-in, payments, push delivery), **Clerk** (authentication), **Convex** (database/backend), and **RevenueCat** (subscriptions).
+- You can delete your account and all associated data from inside the App at any time (Settings → Delete Account).
+- If you are in the EEA, UK, or Switzerland, you have the rights described in §7.3 below.
+
+---
+
+## 1. Information we collect
+
+### 1.1 Information you provide
+
+When you sign up using **Sign in with Apple**, we receive:
+
+- An email address. This may be Apple's anonymized relay address (e.g. `*@privaterelay.appleid.com`) if you choose "Hide My Email."
+- Your name, but only if you choose to share it on first sign-in.
+
+When you use the App, you also create:
+
+- A **character name** and **avatar appearance** (body type, skin tone, hair style, hair colour, eye colour, eyebrow colour) chosen during onboarding. These are aesthetic preferences for a stylized pixel-art character and are not used to infer or process information about you.
+- A **public username** (auto-generated or set by you), used so friends can find you.
+
+### 1.2 Information generated through your use of the App
+
+While you use the App, we record:
+
+- Your **timezone** (resolved from your device at country-coarse granularity) so quests reset on your local day
+- A **last-active timestamp**, used to power streaks and online status
+- **Quest completion history** (start time, duration, focus type, rewards earned)
+- **Friends list** and friend-request activity
+- **Group quest participation** (which group quests you join, the participants, the outcome)
+- **Purchase receipts and subscription status** for any in-app purchases
+- A **push notification token**, only if you grant notification permission, used to deliver quest reminders and friend or guild notifications
+
+### 1.3 Account identifiers
+
+To link your data across our service providers, we store:
+
+- A **Clerk user ID** (assigned by our authentication provider)
+- A **RevenueCat user ID** (assigned by our subscription provider)
+
+### 1.4 Information stored only on your device
+
+The following is stored locally and never sent to our servers:
+
+- Onboarding draft state, current focus-timer state, and cached subscription entitlements (in encrypted device storage via MMKV)
+- Authentication tokens (in the iOS Keychain via SecureStore)
+- Your device locale (read from iOS, used to choose the App's language)
+
+### 1.5 Categories of personal information (for California residents)
+
+Under the California Consumer Privacy Act (CCPA/CPRA), the personal information described above falls into these statutory categories:
+
+| CCPA category | What we collect |
+| --- | --- |
+| **Identifiers** | Email address, name (optional), Clerk user ID, RevenueCat user ID, username, push notification token |
+| **Commercial information** | Purchase receipts, subscription status, in-app purchase history |
+| **Internet or network activity** | Quest completion history, friends list, group quest participation, last-active timestamp |
+| **Geolocation data** | Timezone only (country-coarse). We do not collect precise location. |
+
+We do not collect any other CCPA categories — no biometric, sensory, professional, education, financial-account, or sensitive personal information as defined by the CCPA.
+
+---
+
+## 2. What we do not collect
+
+We have deliberately built Focus Quest without:
+
+- **No analytics SDK** — no Mixpanel, Amplitude, PostHog, Firebase Analytics, Sentry, or similar
+- **No crash reporting** beyond Apple's default operating-system crash logs, which are governed by Apple's privacy policy rather than ours
+- **No advertising or third-party tracking** of any kind
+- **No AI or machine-learning** processing of your data
+- **No access to** precise location, camera, microphone, contacts, photo library, HealthKit, calendar, reminders, motion, or Bluetooth — the App does not request these permissions
+
+---
+
+## 3. How we use your information
+
+We use the information we collect to:
+
+- Provide the App's core features (sign you in, save your character, track quest progress)
+- Operate social features (friends list, group quests, online status)
+- Process subscriptions (validate receipts, grant Sworn Membership benefits)
+- Deliver push notifications you've opted into (quest reminders, friend and guild activity)
+- Detect and prevent abuse, fraud, or security incidents
+- Comply with legal obligations (responding to lawful requests; tax and accounting records for purchases)
+
+We do not use your data for advertising, profiling, or automated decision-making with legal effects.
+
+### 3.1 Legal bases under the GDPR
+
+For users in the EEA, UK, or Switzerland, we rely on the following legal bases under Article 6 of the GDPR:
+
+| Purpose | Legal basis |
+| --- | --- |
+| Providing the App, social features, and subscriptions | Performance of a contract — Art. 6(1)(b) |
+| Push notifications | Your consent — Art. 6(1)(a). You can withdraw at any time in iOS Settings or by disabling notifications in-app. |
+| Security and abuse prevention | Legitimate interests — Art. 6(1)(f) |
+| Tax and accounting records, responding to legal requests | Legal obligation — Art. 6(1)(c) |
+
+---
+
+## 4. Service providers we share data with
+
+We use four service providers to run the App. Each receives only the minimum data needed to perform its role and is contractually bound to protect it.
+
+| Provider | What they receive | Purpose | Privacy policy |
+| --- | --- | --- | --- |
+| **Apple** | Sign in with Apple email, purchase receipts, push tokens | Sign-in, payment processing, push delivery | [apple.com/legal/privacy](https://www.apple.com/legal/privacy/en-ww/) |
+| **Clerk** | Email, name (if shared), session metadata | Authentication and session management | [clerk.com/privacy](https://clerk.com/privacy) |
+| **Convex** | All in-app account data (profile, quests, friends, group quests, push tokens) | Application backend and database | [convex.dev/legal/privacy](https://www.convex.dev/legal/privacy) |
+| **RevenueCat** | RevenueCat user ID, purchase receipts, subscription state | Subscription and in-app purchase orchestration | [revenuecat.com/privacy](https://www.revenuecat.com/privacy) |
+
+We may also disclose information where required by law, in response to a valid legal request, or where strictly necessary to protect the rights, safety, or property of users or the public.
+
+---
+
+## 5. We do not sell or share your data
+
+We **do not sell** your personal information, and we **do not share** it for cross-context behavioural advertising, as those terms are defined under the California Consumer Privacy Act (CCPA/CPRA) and similar laws in Virginia, Colorado, Connecticut, Utah, Texas, and other US states with comprehensive privacy laws.
+
+We have not sold or shared personal information of any user, including any user under the age of 16, in the preceding 12 months, and we have no plans to do so.
+
+---
+
+## 6. International data transfers
+
+Our service providers (Clerk, Convex, RevenueCat) are based in the United States and process your data there. When we transfer personal data of users in the EEA, UK, or Switzerland to the United States, we rely on **Standard Contractual Clauses** approved by the European Commission, supplemented by the technical and organizational safeguards each provider maintains. You can request a copy of the relevant clauses by contacting us at the email address above.
+
+---
+
+## 7. Your rights
+
+Depending on where you live, you have specific rights regarding your personal information.
+
+### 7.1 California residents (CCPA/CPRA)
+
+You have the right to:
+
+- **Know** what personal information we collect, use, and disclose
+- **Access** a copy of the personal information we hold about you
+- **Delete** your personal information, subject to limited legal exceptions (e.g. tax records)
+- **Correct** inaccurate personal information
+- **Opt out** of the sale or sharing of personal information (we do not sell or share — but the right exists regardless)
+- **Limit use of sensitive personal information** (we do not collect sensitive personal information, but the right exists regardless)
+- **Non-discrimination** — we will not deny service, charge different prices, or provide a different level of quality because you exercised a privacy right
+
+### 7.2 Other US state residents
+
+If you live in **Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, Delaware, Iowa, Tennessee, Nebraska, New Hampshire, New Jersey, Minnesota, Maryland, Indiana, Kentucky, or Rhode Island**, you have similar rights under your state's comprehensive privacy law, generally including:
+
+- The right to access, delete, correct, and obtain a portable copy of your personal data
+- The right to opt out of targeted advertising, sale of personal data, and certain types of profiling
+- Where applicable, the right to appeal a denial of a privacy request
+
+### 7.3 EEA, UK, and Switzerland residents (GDPR)
+
+If you are located in the European Economic Area, the United Kingdom, or Switzerland, you have the following rights under the GDPR and equivalent UK and Swiss law:
+
+- **Access** — request a copy of the personal data we hold about you
+- **Rectification** — ask us to correct inaccurate data
+- **Erasure** — ask us to delete your data ("right to be forgotten")
+- **Restriction** — ask us to limit how we use your data
+- **Portability** — receive your data in a structured, machine-readable format
+- **Objection** — object to processing based on our legitimate interests
+- **Withdraw consent** — for any processing based on consent (such as push notifications), at any time, without affecting processing carried out before withdrawal
+
+You also have the right to lodge a complaint with a data protection authority. Our lead supervisory authority is the **Berliner Beauftragte für Datenschutz und Informationsfreiheit** ([datenschutz-berlin.de](https://www.datenschutz-berlin.de)), but you may also complain to the authority in your country of residence.
+
+### 7.4 How to exercise your rights
+
+To exercise any of these rights, email **kaumon.business@gmail.com** from the email address associated with your Focus Quest account, or use the in-app **Settings → Delete Account** flow for deletion.
+
+We will verify your request by confirming control of the account email and respond within the time frame required by applicable law (typically 45 days under US state laws and one month under the GDPR, each extendable once if necessary). You may also designate an authorized agent to make a request on your behalf, subject to verification.
+
+If we deny your request, you may appeal by replying to our response email; we will reconsider and respond within the time frame required by applicable law.
+
+---
+
+## 8. Account deletion
+
+You can delete your account and all associated personal data at any time:
+
+1. Open Focus Quest
+2. Go to **Settings → Delete Account**
+3. Confirm
+
+Deletion is permanent and immediate. We will remove your account record, character data, quest history, friends list, and push token from our database. Data held by our service providers (Apple, Clerk, RevenueCat) is removed according to their respective retention policies; we instruct them to delete on your behalf where possible.
+
+If you cannot access the in-app flow, email us at **kaumon.business@gmail.com** and we will delete your account manually.
+
+---
+
+## 9. Data retention
+
+- **Account data** (profile, character, progress, friends, quest history): retained while your account exists and deleted when you delete your account.
+- **Purchase receipts**: retained as required by German tax and accounting law (typically 10 years for billing records, in accordance with §147 AO). Receipts are minimised to the data we are legally required to keep.
+- **Push notification tokens**: deleted when you disable notifications or delete your account.
+- **Locally stored data on your device**: removed when you uninstall the App.
+
+---
+
+## 10. Security
+
+We protect your information using the technical and organizational measures expected of a modern mobile application, including:
+
+- Encrypted transport (TLS) for all data sent to and from the App
+- Encrypted storage at our service providers
+- iOS Keychain for authentication tokens on your device
+- Access to backend systems limited to the developer
+
+No system is perfectly secure. We cannot guarantee that unauthorized access will never occur, but we will notify affected users without undue delay if a breach is reasonably likely to result in harm, in accordance with applicable breach-notification laws (including GDPR Art. 34 and US state breach-notification statutes).
+
+---
+
+## 11. Children
+
+Focus Quest is **not directed to children under 13**. You must be at least **13 years old** to use the App.
+
+- Consistent with the U.S. Children's Online Privacy Protection Act (COPPA), we do not knowingly collect personal information from children under 13.
+- If you are between 13 and 16 and located in the European Economic Area, the United Kingdom, or another jurisdiction where the digital-consent age is higher than 13, you confirm that your parent or legal guardian has consented to your use of the App. In Germany, the digital-consent age under §8 BDSG is 16.
+
+If you believe a child under the applicable age has provided us with personal information, please contact us at **kaumon.business@gmail.com** and we will delete the account and associated data.
+
+---
+
+## 12. Changes to this policy
+
+We may update this Privacy Policy from time to time. When we do, we will update the "Effective" date at the top of this page. For material changes, we will notify you in-app before the changes take effect. Your continued use of the App after the effective date constitutes acceptance of the updated policy.
+
+---
+
+## 13. Contact
+
+For privacy questions, data subject requests, or any other concerns about this policy:
+
+**Kaumon Aung**
+Berlin, Germany
+**kaumon.business@gmail.com**

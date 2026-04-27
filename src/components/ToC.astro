@@ -1,0 +1,35 @@
+---
+// Auto-builds a sticky table of contents from h2[id] elements in the doc-main.
+// Hydrates on the client; scrollspy highlights the active section.
+---
+<aside class="toc" aria-label="Table of contents">
+  <div class="toc-label">On this page</div>
+  <ol id="toc-list"></ol>
+  <div class="toc-foot">
+    <a href="mailto:kaumon.business@gmail.com">Questions →</a>
+  </div>
+</aside>
+<script>
+  const list = document.getElementById('toc-list');
+  const sections = Array.from(document.querySelectorAll('.doc-main h2[id]')) as HTMLHeadingElement[];
+  if (list && sections.length) {
+    list.innerHTML = sections.map((h) => {
+      // strip leading "01" / "1." etc from the visible label
+      const label = (h.textContent || '').replace(/^\s*\d+[.\s]?\s*/, '').trim();
+      return `<li><a href="#${h.id}">${label}</a></li>`;
+    }).join('');
+    const links = new Map<string, HTMLAnchorElement>();
+    list.querySelectorAll('a').forEach((a) => {
+      const id = a.getAttribute('href')?.replace('#', '');
+      if (id) links.set(id, a as HTMLAnchorElement);
+    });
+    function tick() {
+      const y = window.scrollY + 120;
+      let activeId = sections[0].id;
+      for (const sec of sections) if (sec.offsetTop <= y) activeId = sec.id;
+      links.forEach((a, id) => a.classList.toggle('active', id === activeId));
+    }
+    window.addEventListener('scroll', tick, { passive: true });
+    tick();
+  }
+</script>

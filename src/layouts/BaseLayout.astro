@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import TopBar from '../components/TopBar.astro';
+import Footer from '../components/Footer.astro';
+import ProgressBar from '../components/ProgressBar.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Focus Quest — a focus app for adventurers.' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script is:inline>
+    (() => {
+      const stored = localStorage.getItem('fq-theme');
+      const dark = stored === 'dark' || (!stored && matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+<body>
+  <ProgressBar />
+  <TopBar />
+  <main><slot /></main>
+  <Footer />
+</body>
+</html>

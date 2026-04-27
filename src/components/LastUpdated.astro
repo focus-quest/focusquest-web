@@ -1,0 +1,10 @@
+---
+interface Props { effective: string; updated: string; }
+const { effective, updated } = Astro.props;
+---
+<div class="last-updated">
+  <span class="dot"></span>
+  <span>Effective <b>{effective}</b></span>
+  <span class="sep">·</span>
+  <span>Last updated <b>{updated}</b></span>
+</div>

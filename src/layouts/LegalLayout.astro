@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import ToC from '../components/ToC.astro';
+import LastUpdated from '../components/LastUpdated.astro';
+
+interface Props {
+  title: string;
+  lede: string;
+  effective: string;
+  updated: string;
+}
+const { title, lede, effective, updated } = Astro.props;
+---
+<BaseLayout title={`${title} · Focus Quest`}>
+  <section class="page doc">
+    <div class="doc-main">
+      <div class="doc-eyebrow">Legal</div>
+      <h1 class="doc-title">{title}</h1>
+      <p class="doc-lede">{lede}</p>
+      <LastUpdated effective={effective} updated={updated} />
+      <slot />
+    </div>
+    <ToC />
+  </section>
+</BaseLayout>
