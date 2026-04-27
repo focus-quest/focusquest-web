@@ -41,7 +41,13 @@ Open **Settings → Delete Account → Confirm** in the app. Deletion is permane
 ## Pro Membership
 
 **Is Focus Quest free?**
-You can use Focus Quest without paying. **Pro Membership** is the optional premium tier — the in-app subscription screen lists what is currently included.
+Yes. You can download and use Focus Quest without a subscription. **Pro Membership** is an optional upgrade — there is no free trial, but the core app is free to use indefinitely.
+
+**What does Pro Membership include?**
+A monthly stipend of in-app currency, elevated standing within the in-app Adventurer's Guild, and the additional benefits listed on the in-app subscription screen.
+
+**How much does Pro Membership cost?**
+US **$4.99 per month** or **$39.99 per year**. Equivalent prices in your local currency are shown on the in-app subscription screen.
 
 **How do I cancel my subscription?**
 Subscriptions are billed by Apple. Open **iOS Settings → [your name] → Subscriptions → Focus Quest** and tap **Cancel Subscription**. Your access continues until the end of the current billing period.
