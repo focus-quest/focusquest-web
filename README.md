@@ -10,8 +10,8 @@ Built with Astro 6, React 19, and MDX. Static-rendered, deployed to GitHub Pages
 - `/privacy` — Privacy Policy (Markdown via content collection)
 - `/terms` — Terms & Conditions (Markdown via content collection)
 - `/support` — Support page (static)
-- `/faq` — Frequently Asked Questions (placeholder)
-- `/impressum` — Legal disclosure required under German law (**placeholder — must be filled in before launch**)
+- `/faq` — Frequently Asked Questions
+- `/impressum` — Legal disclosure required under German law (§5 TMG, §18 MStV)
 
 ## Local development
 
@@ -80,6 +80,23 @@ If a custom domain is added later (CNAME in `public/`), set `site` in `astro.con
 ## TODO before launch
 
 - **Set `APP_STORE_URL`** in `src/consts.ts` once the iOS app is live on the App Store. While `null` in production, all "Download on the App Store" buttons and the Apple trademark line are hidden; setting the URL re-enables them everywhere. Dev mode (`npm run dev`) always shows them so the design stays reviewable locally.
+
+## Polish backlog
+
+Non-blocking items to pick up when there's time. None of these gate launch.
+
+- **OG image + Twitter card meta tags.** When someone shares a link to any page on Slack, iMessage, Discord, X, etc., the preview is currently bare (no image, generic title fallback). Add to `src/layouts/BaseLayout.astro` inside `<head>`:
+  - `<meta property="og:title" content={title}>` and `<meta property="og:description" content={description}>` (description prop already exists per page)
+  - `<meta property="og:image" content="https://focus-quest.github.io/focusquest-web/og-image.png">` (1200×630 PNG)
+  - `<meta property="og:url">`, `<meta property="og:type" content="website">`, `<meta property="og:site_name" content="Focus Quest">`
+  - Twitter equivalents: `<meta name="twitter:card" content="summary_large_image">`, `<meta name="twitter:title">`, `<meta name="twitter:description">`, `<meta name="twitter:image">`
+  - Drop the OG image at `public/og-image.png` (1200×630) — pixel-art hero scene with the Focus Quest wordmark works well.
+  - Per-page overrides: pass `ogImage` as a prop to `BaseLayout` if a specific page needs its own image.
+  - Test with [opengraph.xyz](https://www.opengraph.xyz/) or Slack/iMessage after deploy.
+- **`public/robots.txt`** pointing to `https://focus-quest.github.io/focusquest-web/sitemap-index.xml`. Astro generates the sitemap automatically; robots.txt is just a single file telling crawlers where to find it.
+- **Custom 404 page** at `src/pages/404.astro`. Astro generates a generic one; a branded version using `BaseLayout` with a "back to home" link looks more deliberate.
+- **Heading duplication on legal pages.** `privacy.mdx` and `terms.mdx` start with both a frontmatter `title` (rendered as h1 by `LegalLayout`) and an `# H1` in the markdown body. The body h1 is redundant — remove it from both files.
+- **Update `withastro/action`** when a Node 24 release ships. The current build emits a Node 20 deprecation warning; non-blocking until **September 2026** when Node 20 is removed from runners.
 
 ## What's not here
 
