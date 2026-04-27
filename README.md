@@ -79,8 +79,7 @@ If a custom domain is added later (CNAME in `public/`), set `site` in `astro.con
 
 ## TODO before launch
 
-- **Impressum** (`src/content/legal/impressum.md`) is a placeholder. Required under §5 TMG and §18 MStV for German-based operators — must include the operator's full legal name, postal address (no P.O. box), contact email, and tax ID (or note that none is held) before publishing.
-- **FAQ** (`src/content/legal/faq.md`) is a placeholder.
+- **Set `APP_STORE_URL`** in `src/consts.ts` once the iOS app is live on the App Store. While `null` in production, all "Download on the App Store" buttons and the Apple trademark line are hidden; setting the URL re-enables them everywhere. Dev mode (`npm run dev`) always shows them so the design stays reviewable locally.
 
 ## What's not here
 
