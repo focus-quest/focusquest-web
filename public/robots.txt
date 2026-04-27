@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://focus-quest.github.io/focusquest-web/sitemap-index.xml

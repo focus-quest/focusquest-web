@@ -93,10 +93,9 @@ Non-blocking items to pick up when there's time. None of these gate launch.
   - Drop the OG image at `public/og-image.png` (1200×630) — pixel-art hero scene with the Focus Quest wordmark works well.
   - Per-page overrides: pass `ogImage` as a prop to `BaseLayout` if a specific page needs its own image.
   - Test with [opengraph.xyz](https://www.opengraph.xyz/) or Slack/iMessage after deploy.
-- **`public/robots.txt`** pointing to `https://focus-quest.github.io/focusquest-web/sitemap-index.xml`. Astro generates the sitemap automatically; robots.txt is just a single file telling crawlers where to find it.
-- **Custom 404 page** at `src/pages/404.astro`. Astro generates a generic one; a branded version using `BaseLayout` with a "back to home" link looks more deliberate.
-- **Heading duplication on legal pages.** `privacy.mdx` and `terms.mdx` start with both a frontmatter `title` (rendered as h1 by `LegalLayout`) and an `# H1` in the markdown body. The body h1 is redundant — remove it from both files.
 - **Update `withastro/action`** when a Node 24 release ships. The current build emits a Node 20 deprecation warning; non-blocking until **September 2026** when Node 20 is removed from runners.
+
+> Note on `robots.txt`: it's served at `https://focus-quest.github.io/focusquest-web/robots.txt`, but crawlers fetch robots.txt from the *host root* (`focus-quest.github.io/robots.txt`) which we don't control. So the current robots.txt is effectively decorative — it becomes authoritative only after a custom domain is added. In the meantime, submit the sitemap directly via Google Search Console / Bing Webmaster Tools at launch.
 
 ## What's not here
 

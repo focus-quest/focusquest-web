@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+---
+<BaseLayout title="Page not found · Focus Quest" description="This page doesn't exist on Focus Quest.">
+  <section class="page hero">
+    <div class="hero-eyebrow"><span class="pip"></span> 404 · Page not found</div>
+    <h1 class="hero-title">This quest leads nowhere.</h1>
+    <p class="hero-lede">The page you were looking for has either moved or never existed. Try the home page, or pick one of the legal pages from the footer.</p>
+    <div class="hero-cta">
+      <a class="btn-secondary" href={base}>← Back to home</a>
+      <a class="btn-secondary" href={`${base}support`}>Get support</a>
+    </div>
+  </section>
+</BaseLayout>
