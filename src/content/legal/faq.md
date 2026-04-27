@@ -38,10 +38,10 @@ To save your character, sync progress across devices, let friends find you, and 
 **How do I delete my account?**
 Open **Settings → Delete Account → Confirm** in the app. Deletion is permanent and immediate. The [Support page](../support/) covers the full deletion details and a fallback email path if the in-app flow is unavailable.
 
-## Sworn Membership
+## Pro Membership
 
 **Is Focus Quest free?**
-You can use Focus Quest without paying. **Sworn Membership** is the optional premium tier — the in-app subscription screen lists what is currently included.
+You can use Focus Quest without paying. **Pro Membership** is the optional premium tier — the in-app subscription screen lists what is currently included.
 
 **How do I cancel my subscription?**
 Subscriptions are billed by Apple. Open **iOS Settings → [your name] → Subscriptions → Focus Quest** and tap **Cancel Subscription**. Your access continues until the end of the current billing period.
