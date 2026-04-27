@@ -63,22 +63,24 @@ The Table of Contents auto-builds from `h2[id]` headings — Markdown headings g
 
 ## Deployment
 
-Push to `main`. The GitHub Actions workflow at `.github/workflows/deploy.yml` (using `withastro/action`) builds and deploys to GitHub Pages.
+Hosted from the [`focus-quest`](https://github.com/focus-quest) GitHub organization at:
 
-**Before the first deploy, confirm both values in `astro.config.mjs`:**
+**https://focus-quest.github.io/focusquest-web/**
 
-```js
-site: 'https://kaumon-aung.github.io',  // <-- confirm GitHub username
-base: '/focusquest-web',                 // <-- confirm repository name
-```
+Push to `main` and the GitHub Actions workflow at `.github/workflows/deploy.yml` (using `withastro/action`) builds and deploys to GitHub Pages.
 
-If a custom domain is added later (CNAME in `public/`), set `site` to that domain and **delete the `base` line entirely**.
+If a custom domain is added later (CNAME in `public/`), set `site` in `astro.config.mjs` to that domain and **delete the `base` line entirely**.
+
+### One-time GitHub setup
+
+1. Create a repository named `focusquest-web` under the `focus-quest` org and push this code.
+2. In the repo settings → Pages → Source: **GitHub Actions**.
+3. The first push to `main` will trigger the workflow and publish to the URL above.
 
 ## TODO before launch
 
 - **Impressum** (`src/content/legal/impressum.md`) is a placeholder. Required under §5 TMG and §18 MStV for German-based operators — must include the operator's full legal name, postal address (no P.O. box), contact email, and tax ID (or note that none is held) before publishing.
 - **FAQ** (`src/content/legal/faq.md`) is a placeholder.
-- Confirm `site` and `base` in `astro.config.mjs`.
 
 ## What's not here
 
