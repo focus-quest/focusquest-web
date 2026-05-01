@@ -1,10 +1,12 @@
 ---
 interface Props { effective: string; updated: string; }
 const { effective, updated } = Astro.props;
+const showEffective = effective && effective !== updated;
 ---
-<div class="last-updated">
-  <span class="dot"></span>
-  <span>Effective <b>{effective}</b></span>
-  <span class="sep">·</span>
-  <span>Last updated <b>{updated}</b></span>
+<div class="last-updated-block">
+  <div class="last-updated">
+    <span class="dot"></span>
+    <span>Updated <b>{updated}</b></span>
+  </div>
+  {showEffective && <div class="effective-note">Effective {effective}</div>}
 </div>
