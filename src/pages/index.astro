@@ -3,11 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { SHOW_APP_STORE_LINK, APP_STORE_HREF } from '../consts';
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
-<BaseLayout title="Focus Quest — a focus app for adventurers">
+<BaseLayout title="FocusQuest — a focus app for adventurers">
   <section class="page hero">
     <div class="hero-eyebrow"><span class="pip"></span> A focus app for adventurers</div>
     <h1 class="hero-title">Turn focus sessions into quests.</h1>
-    <p class="hero-lede">Focus Quest is a pixel-art productivity RPG for iOS. Pick a quest, choose your biome, and let your character journey across scrolling landscapes while you work. Earn XP, gold, and armor — never at the cost of a friend's progress.</p>
+    <p class="hero-lede">FocusQuest is a pixel-art productivity RPG for iOS. Pick a quest, choose your biome, and let your character journey across scrolling landscapes while you work. Earn XP, gold, and armor — never at the cost of a friend's progress.</p>
     <div class="hero-cta">
       {SHOW_APP_STORE_LINK && (
         <a class="btn-primary" href={APP_STORE_HREF}>
@@ -28,7 +28,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <a class="home-card" href={`${base}terms`}>
       <div class="card-eyebrow">Legal</div>
       <h3>Terms &amp; Conditions</h3>
-      <p>The agreement between you and Focus Quest. Subscription details, acceptable use, and the usual fine print.</p>
+      <p>The agreement between you and FocusQuest. Subscription details, acceptable use, and the usual fine print.</p>
       <span class="arrow">Read the terms →</span>
     </a>
     <a class="home-card" href={`${base}support`}>

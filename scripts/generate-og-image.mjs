@@ -1,8 +1,7 @@
-// Generates public/og-image.png from an inline SVG.
+// Generates public/og-image.png from an inline SVG composited with the app icon.
 // Run with: npm run og:gen
 //
-// This is the placeholder OG image used until a hand-designed one
-// replaces it. To tweak the look, edit the SVG below and re-run.
+// To tweak the look, edit the SVG below and re-run.
 
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
@@ -10,6 +9,7 @@ import { dirname, join } from 'node:path';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const out = join(root, '..', 'public', 'og-image.png');
+const iconPath = join(root, '..', 'public', 'icon.png');
 
 const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
@@ -31,11 +31,8 @@ const svg = `
   <text x="96" y="475" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
         font-size="28" font-weight="400" fill="#3d424d">A pixel-art productivity RPG for iOS.</text>
 
-  <g transform="translate(96, 550)">
-    <rect x="0" y="0" width="10" height="10" fill="#b8860b" transform="rotate(45 5 5)"/>
-    <text x="26" y="11" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-          font-size="18" font-weight="500" fill="#0f1115">Focus Quest</text>
-  </g>
+  <text x="172" y="546" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        font-size="22" font-weight="600" fill="#0f1115">FocusQuest</text>
 
   <text x="1104" y="561" text-anchor="end"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
@@ -43,5 +40,14 @@ const svg = `
 </svg>
 `;
 
-await sharp(Buffer.from(svg)).png().toFile(out);
+const baseLayer = await sharp(Buffer.from(svg)).png().toBuffer();
+const iconLayer = await sharp(iconPath)
+  .resize(56, 56, { kernel: 'nearest' })
+  .toBuffer();
+
+await sharp(baseLayer)
+  .composite([{ input: iconLayer, top: 510, left: 96 }])
+  .png()
+  .toFile(out);
+
 console.log(`✓ Wrote ${out}`);

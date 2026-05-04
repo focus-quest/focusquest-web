@@ -87,11 +87,11 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
-.brand-dot {
-  width: 8px; height: 8px;
-  background: var(--accent);
-  transform: rotate(45deg);
+.brand-icon {
+  width: 24px; height: 24px;
+  border-radius: 5px;
   flex-shrink: 0;
+  image-rendering: pixelated;
 }
 
 .nav {
