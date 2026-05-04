@@ -571,6 +571,11 @@ footer {
   color: var(--ink-faint);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
 }
+.heart {
+  width: 12px; height: 12px;
+  color: #e11d48;
+  vertical-align: -1px;
+}
 
 /* Page transitions */
 .page { animation: fade .25s ease both; }
