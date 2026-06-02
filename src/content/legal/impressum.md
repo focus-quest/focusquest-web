@@ -16,7 +16,7 @@ Germany
 
 ## 2. Contact
 
-Email: [kaumon.business@gmail.com](mailto:kaumon.business@gmail.com)
+Email: [support@example.com](mailto:support@example.com)
 
 ## 3. Responsible for content per §18 Abs. 2 MStV
 

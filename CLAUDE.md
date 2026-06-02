@@ -7,7 +7,7 @@ Static marketing + legal site for the FocusQuest iOS app, built with Astro 6 + M
 `notes/TODO.md` (local-only — `notes/` is gitignored) tracks pending items before/around App Store launch. Currently:
 
 1. Set `APP_STORE_URL` in `src/consts.ts` once the iOS app is live.
-2. Replace `kaumon.business@gmail.com` across the site with the real support address.
+2. Replace the `support@example.com` placeholder across the site with the real support address once it exists (e.g. `support@focus-quest.app`).
 
 Read `notes/TODO.md` for file-by-file pointers.
 
