@@ -28,12 +28,12 @@ function rehypeWrapTables() {
 }
 
 // Deployed via GitHub Pages from the `focus-quest` GitHub organization.
-// Live URL: https://focus-quest.github.io/focusquest-web/
-// If a custom domain is added later (CNAME in public/), set `site` to that
-// domain and DELETE the `base` line entirely.
+// Served from the custom domain https://focus-quest.app (CNAME in public/).
+// `base` is intentionally omitted — the site lives at the domain root, not a
+// project sub-path. If you ever revert to the github.io URL, restore
+// `base: '/focusquest-web'` and point `site` back at the github.io host.
 export default defineConfig({
-  site: 'https://focus-quest.github.io',
-  base: '/focusquest-web',
+  site: 'https://focus-quest.app',
   integrations: [react(), mdx(), sitemap()],
   markdown: {
     shikiConfig: { theme: 'github-light' },

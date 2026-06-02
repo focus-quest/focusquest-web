@@ -36,7 +36,7 @@ const svg = `
 
   <text x="1104" y="561" text-anchor="end"
         font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="14" font-weight="400" fill="#6b7280">focus-quest.github.io/focusquest-web</text>
+        font-size="14" font-weight="400" fill="#6b7280">focus-quest.app</text>
 </svg>
 `;
 
