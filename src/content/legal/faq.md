@@ -72,4 +72,4 @@ You must be at least **13** to use FocusQuest. In regions where the digital-cons
 ## Help
 
 **I found a bug or need help.**
-Email **[kaumon.business@gmail.com](mailto:kaumon.business@gmail.com)** with your character name, your iOS version, and what you were doing when the issue appeared. The [Support page](../support/) has more.
+Email **[support@example.com](mailto:support@example.com)** with your character name, your iOS version, and what you were doing when the issue appeared. The [Support page](../support/) has more.
