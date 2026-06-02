@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://focus-quest.github.io/focusquest-web/sitemap-index.xml
+Sitemap: https://focus-quest.app/sitemap-index.xml
