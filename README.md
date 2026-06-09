@@ -86,7 +86,6 @@ If a custom domain is added later (CNAME in `public/`), set `site` in `astro.con
 Non-blocking items to pick up when there's time. None of these gate launch.
 
 - **Replace the placeholder OG image with a hand-designed one.** The current `public/og-image.png` is generated from `scripts/generate-og-image.mjs` (a 1200×630 SVG rasterized via Sharp) — clean but plain. When a pixel-art hero scene is ready, just drop the new PNG at `public/og-image.png` and the existing meta tags pick it up. To tweak the placeholder, edit the SVG in the script and run `npm run og:gen`. Test cards with [opengraph.xyz](https://www.opengraph.xyz/) or by sharing into Slack/iMessage after deploy.
-- **Update `withastro/action`** when a Node 24 release ships. The current build emits a Node 20 deprecation warning; non-blocking until **September 2026** when Node 20 is removed from runners.
 
 > Note on `robots.txt`: it's served at `https://focus-quest.github.io/focusquest-web/robots.txt`, but crawlers fetch robots.txt from the *host root* (`focus-quest.github.io/robots.txt`) which we don't control. So the current robots.txt is effectively decorative — it becomes authoritative only after a custom domain is added. In the meantime, submit the sitemap directly via Google Search Console / Bing Webmaster Tools at launch.
 
