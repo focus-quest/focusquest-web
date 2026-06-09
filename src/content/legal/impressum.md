@@ -16,7 +16,7 @@ Germany
 
 ## 2. Contact
 
-Email: [support@example.com](mailto:support@example.com)
+Email: [support@focus-quest.app](mailto:support@focus-quest.app)
 
 ## 3. Responsible for content per §18 Abs. 2 MStV
 
